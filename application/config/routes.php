@@ -58,3 +58,23 @@ $route['search_member'] = 'pages/search_member';
 $route['about'] = 'pages/about';
 $route['contact'] = 'pages/contact';
 $route['subcription'] = 'pages/signup';
+
+$route['user/login'] = 'user/login_page';
+
+$route['admin'] = 'user/admin_login';
+
+$route['user/subscribe/referal/(:num)/(:any)'] = 'user/signin_page/$1/$2';
+$route['user/myaccount'] = 'user/user_profil';
+
+$route['user/myaccount/activity'] = 'user/user_profil';
+$route['user/myaccount/profile'] = 'user/user_profil_profile';
+$route['user/myaccount/group'] = 'user/user_profil_group';
+$route['user/myaccount/forum']  = 'user/user_profil_forum';
+$route['user/myaccount/media'] = 'user/user_profil_media';
+
+$route['user/myaccount/logout'] = 'auth/logout';
+
+$route['user/forum/group/home/(:any)'] = 'forum/group_forum/$1';
+$route['user/forum/group/member/(:any)'] = 'forum/group_members/$1';
+
+$route['user/detail/(:any)'] = 'user/user_detail/$1';

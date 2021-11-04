@@ -201,24 +201,23 @@
 <div id="login">
     <div id="gp-login-modal">
         <div id="gp-login-close"></div>
-        <div class="gp-login-register-form gp-login-display">
+        <div class="gp-login-register-form">
             <div class="gp-login-form-wrapper">
-                <h5 class="gp-login-title">Sign In</h5>
-                <form name="loginform" class="gp-login-form" action="https://aardvark.ghostpool.com/original/wp-login.php?wpe-login=true" method="post">
+                <h5 class="gp-login-title">Se connecter</h5>
+                <form class="gp-login-form" action="" method="post">
                     <p class="username gp-input">
-                        <input type="text" autocomplete="username" name="log" class="user_login" value="" size="20" placeholder="Username Or Email" required />
+                        <input type="text" id="login_email" class="user_login" value="" size="20" placeholder="Email" required />
                     </p>
                     <p class="password gp-input">
-                        <input type="password" autocomplete="current-password" name="pwd" class="user_pass" size="20" placeholder="Password" required />
+                        <input type="password" id="login_pass" class="user_pass" size="20" placeholder="Mot de passe" required />
                     </p>
-                    <div class="gp-login-form-actions gp-input"></div>
-                    <p class="rememberme gp-input">
-                        <input name="rememberme" class="rememberme" type="checkbox" value="forever" /> Remember Me
-                    </p>
+                    <!-- <p class="rememberme gp-input">
+                        <input name="rememberme" class="rememberme" type="checkbox" value="forever" /> Se sourvenir de moi
+                    </p> -->
                     <div class="gp-social-login gp-input">
                         <div class="gp-login-or-lines">
                             <div class="gp-login-or-left-line"></div>
-                            <div class="gp-login-or-text">or</div>
+                            <!-- <div class="gp-login-or-text">or</div> -->
                             <div class="gp-login-or-right-line"></div>
                         </div>
                         <style type="text/css">
@@ -232,18 +231,17 @@
 
                             .wsl_connect_with_provider {}
                         </style>
-                        <div class="wp-social-login-widget">
-                            <div class="wp-social-login-connect-with">Connect with:</div>
-                            <div class="wp-social-login-provider-list"> <a rel="nofollow" href="wp-login8b5a.html?wpe-login=true&amp;action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Faardvark.ghostpool.com%2Foriginal%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook" role="button"> Facebook </a> <a rel="nofollow" href="wp-login7213.html?wpe-login=true&amp;action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Faardvark.ghostpool.com%2Foriginal%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google" role="button"> Google </a> <a rel="nofollow" href="wp-login9b97.html?wpe-login=true&amp;action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Faardvark.ghostpool.com%2Foriginal%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter" role="button"> Twitter </a></div>
-                            <div class="wp-social-login-widget-clearing"></div>
-                        </div>
+
                     </div>
-                    <input type="submit" name="wp-submit" class="wp-submit gp-input" value="Sign In" />
+                    <div id="smtdiv">
+                        <input type="button" onclick="login()" name="" id="login_submit" class="wp-submit gp-input" value="Connexion" />
+                    </div>
+                    <div id="boxloader" style="display: none;">
+                        <p id="login_loader"></p>
+                    </div>
                     <div class="gp-login-results"></div>
-                    <div class="gp-login-links"> <a href="register/index.html" class="gp-bp-register-link">Register</a> <a href="#" class="gp-lost-password-link">Lost Password</a></div>
-                    <input type="hidden" name="form_type" value="login" />
-                    <input type="hidden" id="ghostpool_ajax_login_popup_nonce" name="ghostpool_ajax_login_popup_nonce" value="8876ecef9d" />
-                    <input type="hidden" name="_wp_http_referer" value="/original/" />
+                    <!-- <div class="gp-login-links"> <a href="register/index.html" class="gp-bp-register-link">Register</a> <a href="#" class="gp-lost-password-link">Lost Password</a></div> -->
+
                 </form>
             </div>
             <div class="gp-lost-password-form-wrapper">
@@ -255,16 +253,101 @@
                     </p>
                     <input type="submit" name="wp-submit" class="wp-submit gp-input" value="Reset Password" />
                     <div class="gp-login-results"></div>
+                    <div id="error_login"></div>
                     <div class="gp-login-links"> <a href="#" class="gp-login-link">Sign In</a></div>
-                    <input type="hidden" name="form_type" value="lost_password" />
-                    <input type="hidden" id="ghostpool_ajax_lost_password_popup_nonce" name="ghostpool_ajax_lost_password_popup_nonce" value="8876ecef9d" />
-                    <input type="hidden" name="_wp_http_referer" value="/original/" />
                 </form>
             </div>
         </div>
     </div>
 </div>
 <div data-theiaStickySidebar-sidebarSelector='".gp-sidebar"' data-theiaStickySidebar-options='{"containerSelector":".gp-inner-container","additionalMarginTop":100,"additionalMarginBottom":20,"updateSidebarHeight":false,"minWidth":1081,"sidebarBehavior":"modern","disableOnResponsiveLayouts":true}'></div>
+
+<script>
+    function register() {
+        // alert("ok");
+        // $("#signup_submit").attr("desabled", true);
+        $("#signupbtn").hide();
+        $("#loader").show();
+        $("#loadertxt").html('Traitement en cours...')
+        var lastname = $("#lastname").val();
+        var firstname = $("#firstname").val();
+        var phone = $("#phone").val();
+        var gender = $("#gender").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var password_conf = $("#password_confirm").val();
+        var prom = $("#prom").val();
+        var userclasse = $("#class").val();
+        var ref_id = $("#ref_id").val();
+        $.ajax({
+            method: "POST",
+            url: "<?= base_url() ?>auth/signup",
+            data: {
+                lastname: lastname,
+                firstname: firstname,
+                phone: phone,
+                gender: gender,
+                email: email,
+                password: password,
+                password_conf: password_conf,
+                proom: prom,
+                userclasse: userclasse,
+                ref_id: ref_id
+            },
+            success: function(msg) {
+                console.log(msg)
+                var val = msg.split("||");
+                if (val[0] == "false") {
+                    // $("#message").show();
+                    // $("#error_message").html(val[1]);
+                    toastr.error(val[1])
+                    $("#signupbtn").show();
+                    $("#loader").hide();
+                    $("#loadertxt").html('')
+                } else if (val[0] == "true") {
+                    // $("#message").hide();
+                    toastr.success(val[1])
+                    $("#signupbtn").show();
+                    $("#loader").hide();
+                    $("#loadertxt").html('')
+                    $("#signup_form")[0].reset();
+                    location.reload();
+                    // $("#click_login").click();
+                }
+            }
+        })
+    }
+
+    function login() {
+        // alert("ok")
+        $("#smtdiv").hide()
+        $("#login_loader").html('Connexion en cours...');
+        var email = $("#login_email").val();
+        var password = $("#login_pass").val();
+        // console.log(email+password);
+
+        $.ajax({
+            mothod: "POST",
+            url: "<?= base_url() ?>auth/login",
+            data: {
+                email: email,
+                password: password
+            },
+            success: function(msg) {
+                console.log(msg);
+                var val = msg.split("||");
+                if (val[0] == "false") {
+                    // $("#error_login").html(val[1]);
+                    toastr.error(val[1])
+                    $("#smtdiv").show()
+                } else if (val[0] == "true") {
+                    toastr.success(val[1])
+                    location.reload();
+                }
+            }
+        })
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
 <script type="text/html" id="wpb-modifications"></script>
 <script type="text/javascript">
@@ -637,27 +720,168 @@
         }
     };
 </script>
-<script type='text/javascript' id='mediaelement-js-extra'>
-    var _wpmejsSettings = {
-        "pluginPath": "\/original\/wp-includes\/js\/mediaelement\/",
-        "classPrefix": "mejs-",
-        "stretching": "responsive"
-    };
-</script>
-<script type='text/javascript' id='ghostpool-filters-js-extra'>
-    var ghostpool_filters = {
-        "ajaxurl": "https:\/\/aardvark.ghostpool.com\/original\/wp-admin\/admin-ajax.php",
-        "nonce": "07f0b2782a",
-        "query_string": ""
-    };
-</script>
-<script type='text/javascript' id='ghostpool-ajax-login-js-extra'>
-    var ghostpool_ajax_login_params = {
-        "ajax_url": "https:\/\/aardvark.ghostpool.com\/original\/wp-admin\/admin-ajax.php",
-        "loading_message": "Verifying..."
-    };
-</script>
+
 <script defer src="<?= base_url() ?>assets/js/autoptimize_55a24aed4460a128137797181fc2209e.js"></script>
+<!-- Bootstrap 4 -->
+<script src="<?= base_url() ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="<?= base_url() ?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="<?= base_url() ?>assets/plugins/toastr/toastr.min.js"></script>
+<script>
+    $(function() {
+        var Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+
+        $('.swalDefaultSuccess').click(function() {
+            Toast.fire({
+                icon: 'success',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.swalDefaultInfo').click(function() {
+            Toast.fire({
+                icon: 'info',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.swalDefaultError').click(function() {
+            Toast.fire({
+                icon: 'error',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.swalDefaultWarning').click(function() {
+            Toast.fire({
+                icon: 'warning',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.swalDefaultQuestion').click(function() {
+            Toast.fire({
+                icon: 'question',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+
+        $('.toastrDefaultSuccess').click(function() {
+            toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+        });
+        $('.toastrDefaultInfo').click(function() {
+            toastr.info('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+        });
+        $('.toastrDefaultError').click(function() {
+            toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+        });
+        $('.toastrDefaultWarning').click(function() {
+            toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+        });
+
+        $('.toastsDefaultDefault').click(function() {
+            $(document).Toasts('create', {
+                title: 'Toast Title',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultTopLeft').click(function() {
+            $(document).Toasts('create', {
+                title: 'Toast Title',
+                position: 'topLeft',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultBottomRight').click(function() {
+            $(document).Toasts('create', {
+                title: 'Toast Title',
+                position: 'bottomRight',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultBottomLeft').click(function() {
+            $(document).Toasts('create', {
+                title: 'Toast Title',
+                position: 'bottomLeft',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultAutohide').click(function() {
+            $(document).Toasts('create', {
+                title: 'Toast Title',
+                autohide: true,
+                delay: 750,
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultNotFixed').click(function() {
+            $(document).Toasts('create', {
+                title: 'Toast Title',
+                fixed: false,
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultFull').click(function() {
+            $(document).Toasts('create', {
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
+                title: 'Toast Title',
+                subtitle: 'Subtitle',
+                icon: 'fas fa-envelope fa-lg',
+            })
+        });
+        $('.toastsDefaultFullImage').click(function() {
+            $(document).Toasts('create', {
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
+                title: 'Toast Title',
+                subtitle: 'Subtitle',
+                image: '../../dist/img/user3-128x128.jpg',
+                imageAlt: 'User Picture',
+            })
+        });
+        $('.toastsDefaultSuccess').click(function() {
+            $(document).Toasts('create', {
+                class: 'bg-success',
+                title: 'Toast Title',
+                subtitle: 'Subtitle',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultInfo').click(function() {
+            $(document).Toasts('create', {
+                class: 'bg-info',
+                title: 'Toast Title',
+                subtitle: 'Subtitle',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultWarning').click(function() {
+            $(document).Toasts('create', {
+                class: 'bg-warning',
+                title: 'Toast Title',
+                subtitle: 'Subtitle',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultDanger').click(function() {
+            $(document).Toasts('create', {
+                class: 'bg-danger',
+                title: 'Toast Title',
+                subtitle: 'Subtitle',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.toastsDefaultMaroon').click(function() {
+            $(document).Toasts('create', {
+                class: 'bg-maroon',
+                title: 'Toast Title',
+                subtitle: 'Subtitle',
+                body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+    });
+</script>
 </body>
 <!-- Mirrored from aardvark.ghostpool.com/original/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Oct 2021 12:58:59 GMT -->
 

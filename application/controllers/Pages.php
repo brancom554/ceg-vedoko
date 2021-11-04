@@ -27,6 +27,8 @@ class Pages extends CI_Controller
 
     public function search_member()
     {
+        // var_dump($this->session->userdata());exit;
+
         $data['activemenu'] = "search_member";
         $this->load->view('template/header', $data);
         $this->load->view('pages/search_member');

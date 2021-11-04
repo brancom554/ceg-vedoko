@@ -12,6 +12,12 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <link media="all" href="<?= base_url() ?>assets/css/autoptimize_5347914d8f8230424cc818beaa3d29a3.css" rel="stylesheet" />
     <link media="screen" href="<?= base_url() ?>assets/css/autoptimize_72196901ef9338ae25759e8756838935.css" rel="stylesheet" />
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/custom_style.sass">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/toastr/toastr.min.css">
+    <!-- Theme style -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous"> -->
     <style media="print">
         @media print {
@@ -36,6 +42,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:label1" content="Est. reading time" />
     <meta name="twitter:data1" content="4 minutes" />
+
     <script type="application/ld+json" class="yoast-schema-graph">
         {
             "@context": "https://schema.org",
@@ -2668,7 +2675,7 @@
                 alert('Social login plugin disabled on demo.');
             });
             /* Insert demo login details into login form */
-            $('<p style="background: #000;padding: 5px 10px;display: block;font-size: 14px;color: #fff;border-radius: 3px;font-weight: 700;">Username: demo&nbsp;&nbsp;&nbsp;Password: demo</p>').prependTo('.gp-login-form');
+            // $('<p style="background: #000;padding: 5px 10px;display: block;font-size: 14px;color: #fff;border-radius: 3px;font-weight: 700;">Username: demo&nbsp;&nbsp;&nbsp;Password: demo</p>').prependTo('.gp-login-form');
         });
     </script>
     <noscript>
@@ -3081,19 +3088,24 @@
                                 </div>
                             </div> -->
                             <div class="gp-search-button gp-header-button"></div>
-                            <!-- <a href="index.html#login/" class="gp-profile-button gp-header-button" title="Login"></a> -->
+
                             <div class="gp-open-mobile-nav-button">
                                 <div>
                                     <div class="gp-nav-button-icon"></div>
                                 </div>
                             </div>
                         </div>
-                        <nav id="gp-main-header-secondary-nav" class="gp-nav">
-                            <ul id="gp-main-header-secondary-menu" class="menu">
-                                <li class="nav-menu-item-35 gp-login-link gp-show-all  main-menu-item  menu-item-even menu-item-depth-0  menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html#login/" class="menu-link main-menu-link">Connexion</a></li>
-                                <li class="nav-menu-item-36 gp-bp-register-link gp-show-all  main-menu-item  menu-item-even menu-item-depth-0  menu-item menu-item-type-custom menu-item-object-custom"><a href="<?= base_url() ?>subcription" class="menu-link main-menu-link">Inscription</a></li>
-                            </ul>
-                        </nav>
+                        <?php if ($this->session->userdata('logged_in') == true) { ?>
+                            <a href="<?= base_url() ?>user/myaccount" class="gp-profile-button gp-header-button" title="Login"></a>
+                            <!-- <a href="<?= base_url() ?>auth/logout" class="" title="Déconnexion"><span class="vc_icon_element-icon fa fa-hand-paper-o" style="color:#777777 !important"></span></a> -->
+                        <?php } else { ?>
+                            <nav id="gp-main-header-secondary-nav" class="gp-nav">
+                                <ul id="gp-main-header-secondary-menu" class="menu">
+                                    <li class="nav-menu-item-35 gp-login-link gp-show-all  main-menu-item  menu-item-even menu-item-depth-0  menu-item menu-item-type-custom menu-item-object-custom"><a href="#login/" class="menu-link main-menu-link" id="click_login">Connexion</a></li>
+                                    <!-- <li class="nav-menu-item-36 gp-bp-register-link gp-show-all  main-menu-item  menu-item-even menu-item-depth-0  menu-item menu-item-type-custom menu-item-object-custom"><a href="<?= base_url() ?>user/subscribe" class="menu-link main-menu-link">Inscription</a></li> -->
+                                </ul>
+                            </nav>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="gp-search-box">
