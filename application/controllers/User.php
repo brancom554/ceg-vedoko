@@ -124,9 +124,11 @@ class User extends CI_Controller
 
     public function sear_member()
     {
-        // var_dump($_REQUEST);
         $key = $_REQUEST['key'];
         $seardata = $this->user_model->searchuser($key);
+
+        // var_dump($seardata);exit;
+
         
         $output = "";
         foreach ($seardata as $members) {
@@ -140,7 +142,7 @@ class User extends CI_Controller
                                         </a>
                                     </div>
                                     <div class="gp-loop-title"> <a href="'.base_url().'user/detail/'.$members->user_id.'">'.ucfirst($members->firstname).' '.ucfirst($members->lastname).'</a></div>
-                                    <div class="gp-loop-meta"> <span class="activity" data-livestamp="2018-07-02T00:15:57+0000">Active 3 years, 3 months ago</span></div>
+                                    <div class="gp-loop-meta"> <span class="activity" data-livestamp="2018-07-02T00:15:57+0000">'.$members->class_code.' - '.$members->prom_name.'</span></div>
                                     <div class="gp-bp-col-action"></div>
                                 </div>
                             </li>

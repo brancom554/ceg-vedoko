@@ -107,7 +107,7 @@ class Auth extends CI_Controller
                 if ($insertUser) {
                     // $lastuser = 
                     $rand = rand();
-                    $link = base_url().'user/subscribe/referal/'.$insertUser.'/'.$rand;
+                    $link = 'user/subscribe/referal/'.$insertUser.'/'.$rand;
                     $userPref = array(
                         "referral_id" => $lastuser['user_id'],
                         "user_id" => $insertUser,

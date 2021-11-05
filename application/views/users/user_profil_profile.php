@@ -17,7 +17,7 @@
             <tr class="field_53 field_i-am optional-field visibility-public alt field_type_selectbox">
                 <td class="label">Referal URL</td>
                 <td class="data">
-                    <p><?= $this->session->userdata('referral_link') ?></p>
+                    <p><?= base_url() . $this->session->userdata('referral_link') ?></p>
                 </td>
             </tr>
             <!-- <tr class="field_120 field_first-name required-field visibility-public field_type_textbox">
@@ -154,3 +154,4 @@
         </table>
     </div> -->
 </div>
+<br><br><br>

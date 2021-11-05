@@ -43,7 +43,7 @@
                     <div class="gp-animated-gradient-bg" style="background: -moz-linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.82) 41%, rgba(54,149,156,0.47) 67%, rgba(0,220,255,0.36) 75%, rgba(195,195,195,0.6) 100%);background: -webkit-linear-gradient(45deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0.82) 41%,rgba(54,149,156,0.47) 67%,rgba(0,220,255,0.36) 75%,rgba(195,195,195,0.6) 100%);background: linear-gradient(45deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0.82) 41%,rgba(54,149,156,0.47) 67%,rgba(0,220,255,0.36) 75%,rgba(195,195,195,0.6) 100%);"></div>
                 </div>
                 <div class="vc_row-full-width vc_clearfix"></div>
-                <div id="membership-levels" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1511099472798 vc_row-has-fill">
+                <!-- <div id="membership-levels" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1511099472798 vc_row-has-fill">
                     <div class="wpb_column vc_column_container vc_col-sm-12">
                         <div class="vc_column-inner vc_custom_1506677824556">
                             <div class="wpb_wrapper">
@@ -147,134 +147,36 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="vc_row-full-width vc_clearfix"></div>
                 <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1511127359756 gp-scrolling-gradient bb_custom_1511127359758">
                     <div class="gp-animated-gradient-column">
                         <div class="wpb_column vc_column_container vc_col-sm-12">
                             <div class="vc_column-inner vc_custom_1506938780687">
                                 <div class="wpb_wrapper">
-                                    <div style="color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1506936913508 bb_custom_1506936903345">Our Members</div>
-                                    <div style="color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1506936972009 bb_custom_1506936972009 bb_custom_1506936972011">Become a part of a growing community and have access to thousands of members.</div>
+                                    <div style="color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1506936913508 bb_custom_1506936903345">Les membres de notre communauté</div>
+                                    <!-- <div style="color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1506936972009 bb_custom_1506936972009 bb_custom_1506936972011">Become a part of a growing community and have access to thousands of members.</div> -->
                                     <div id="gp_buddypress_members_1" class="gp-bp-element ">
                                         <ul class="gp-bp-wrapper gp-bp-members gp-bp-round-avatars gp-align-center gp-style-classic" aria-live="polite" aria-relevant="all" aria-atomic="true">
-                                            <li class="gp-post-item odd is-online">
-                                                <a href="members/demo/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/72/5cbddabff083e-bpfull.jpg" class="avatar user-72-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Kevin Agastra" />
-                                                    <div class="gp-user-online"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/multidev/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/2/5a0f4958834c3-bpfull.jpg" class="avatar user-2-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Robert Nelson" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/wpengine/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/1/5a0f4979de482-bpfull.jpg" class="avatar user-1-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of wpengine" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/wynonna/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img alt src='<?= base_url() ?>assets/uploads/optimum-gravatar-cache/4f.png' class='avatar avatar-90 photo' width='90' height='90' />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/judithholmes/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/44/5a1f16cee4c63-bpfull.jpg" class="avatar user-44-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Judith Holmes" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/stephenward/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/34/5a0f4ac5c5289-bpfull.png" class="avatar user-34-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Stephen Ward" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/samuelflores/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/30/5a0f4a92521c8-bpfull.jpg" class="avatar user-30-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Samuel Flores" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/rhondafreeman/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/35/5a0f4a542b31d-bpfull.jpg" class="avatar user-35-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Rhonda Freeman" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/rebeccacarter/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/29/5a0f4a7689f78-bpfull.jpg" class="avatar user-29-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Rebecca Carter" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/mariakim/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/17/5a0f4c2fcfc6a-bpfull.jpg" class="avatar user-17-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of mariakim" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/larryhamilton/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/20/5a0f4b34eb7a3-bpfull.jpg" class="avatar user-20-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Larry Hamilton" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/kathrynwallace/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/39/5a0f4ae1ef81c-bpfull.jpg" class="avatar user-39-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Kathryn Wallace" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/kathleenbowman/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/26/5a0f4ce0cb664-bpfull.jpg" class="avatar user-26-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Kathleen Bowman" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/jefferyward/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/40/5a0f4ca1a0861-bpfull.jpg" class="avatar user-40-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Jeffery Ward" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/frankrobertson/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/23/5a0f4ccfb643b-bpfull.jpg" class="avatar user-23-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Frank Robertson" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/dorothyfuller/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/43/5a0f44dec123f-bpfull.jpg" class="avatar user-43-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Dorothy Fuller" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/dianemartin/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/22/5a10079b4b18b-bpfull.jpg" class="avatar user-22-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Diane Martin" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/denisebishop/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/25/5a1007cd628b3-bpfull.jpg" class="avatar user-25-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Denise Bishop" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/debbiewells/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/31/5a10090ee4828-bpfull.jpg" class="avatar user-31-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Debbie Wells" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/dalesims/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/24/5a100a06ab5ae-bpfull.jpg" class="avatar user-24-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Dale Sims" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item odd">
-                                                <a href="members/dalejackson/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/16/5a100a661f74c-bpfull.jpg" class="avatar user-16-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Dale Jackson" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
-                                            <li class="gp-post-item even">
-                                                <a href="members/billyhoward/index.html" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url() ?>assets/uploads/avatars/18/5a100d3ace952-bpfull.jpg" class="avatar user-18-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of billyhoward" />
-                                                    <div class="gp-user-offline"></div>
-                                                </a>
-                                            </li>
+                                            <?php foreach ($members as $member) : ?>
+                                                <?php
+                                                $imgsrc = ($member->profil_picture) ? 'uploads/profil_im/' . $member->profil_picture : 'assets/avatar/avatar_male.png';
+
+                                                ?>
+                                                <li class="gp-post-item odd is-online">
+                                                    <a title="<?= ucfirst($member->firstname) . ' ' . ucfirst($member->lastname) ?>" href="<?= base_url() ?>user/detail/<?= $member->user_id ?>" class="gp-bp-avatar"> <span class="gp-bp-hover-effect"></span> <img loading="lazy" src="<?= base_url().$imgsrc ?>" class="avatar user-72-avatar avatar-90 photo" width="90" height="90" alt="Profile picture of Kevin Agastra" />
+                                                        <div class="gp-user-online"></div>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
+
                                         </ul>
                                         <input type="hidden" id="_wpnonce-members" name="_wpnonce-members" value="ff3191cada" />
                                         <input type="hidden" name="gp-members-element-max" class="gp-members-element-max" value="22" />
                                         <input type="hidden" name="gp-members-element-format" class="gp-members-element-format" value="gp-bp-round-avatars" />
                                         <input type="hidden" name="gp-members-element-cover-images" class="gp-members-element-cover-images" value="enabled" />
                                     </div>
-                                    <div class="vc_btn3-container vc_btn3-center vc_custom_1615924379902 bb_custom_1615924379904 bb_custom_1615924379908"> <a onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='transparent'; this.style.color='#ffffff'" onmouseenter="this.style.color='#ffffff';" style="border-color:#ffffff; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-round vc_btn3-style-outline-custom bb_custom_1615924379904 bb_custom_1615924379908" href="elements/members-buddypress/index.html" title="Members (BuddyPress)">View All Members</a></div>
+                                    <div class="vc_btn3-container vc_btn3-center vc_custom_1615924379902 bb_custom_1615924379904 bb_custom_1615924379908"> <a onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='transparent'; this.style.color='#ffffff'" onmouseenter="this.style.color='#ffffff';" style="border-color:#ffffff; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-round vc_btn3-style-outline-custom bb_custom_1615924379904 bb_custom_1615924379908" href="<?= base_url() ?>search_member" title="Members (BuddyPress)">Voir Plus</a></div>
                                 </div>
                             </div>
                         </div>

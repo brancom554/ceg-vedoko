@@ -35,8 +35,9 @@
     </div>
 </div>
 <div>
-    <input type="text" id="url" value="<?= $this->session->userdata('referral_link') ?>" readonly>
+    <!-- <input type="text" id="url" value="<?= $this->session->userdata('referral_link') ?>" readonly> -->
 </div>
+<br><br><br>
 
 <script>
     function accept(forum) {

@@ -39,8 +39,12 @@ class User_model extends CI_Model
         $this->db->select($this->table . '.*');
         $this->db->select($this->table_pref . '.referral_id	as referral, ' . $this->table_pref . '.referral_link as referral_link, ' . $this->table_pref . '.birth_date	as birth_date, ' . $this->table_pref . '.father_id as father,
         ' . $this->table_pref . '.is_job_needed as is_job_needed, ' . $this->table_pref . '.is_employee as is_employee,' . $this->table_pref . '.forum_promotion_id as forum_promotion_id, ' . $this->table_pref . '.forum_general_id as forum_general_id, ' . $this->table_pref . '.activity_sector_id as activity_sector_id, 
-        ' . $this->table_pref . '.promotion_id as promotion_id');
+        ' . $this->table_pref . '.promotion_id as promotion_id, '.$this->table_pref.'.classe_id as classe_id');
+        $this->db->select($this->table_class.'.classe_name as clasee_name,'.$this->table_class.'.class_code as class_code');
+        $this->db->select($this->table_prom.'.promotion_name as prom_name');
         $this->db->join($this->table_pref, $this->table . '.user_id = ' . $this->table_pref . '.user_id');
+        $this->db->join($this->table_prom, $this->table_prom.'.promotion_id = '.$this->table_pref.'.promotion_id');
+        $this->db->join($this->table_class, $this->table_class.'.classe_id = '.$this->table_pref.'.classe_id');
         $this->db->where($this->table_pref . '.active', self::ENREG_ACTIVE);
     }
 
@@ -311,6 +315,13 @@ class User_model extends CI_Model
         $this->select_join();
         $this->db->like($this->table.'.firstname', $key);
         $this->db->or_like($this->table.'.lastname', $key);
+        return $this->db->get($this->table)->result();
+    }
+
+    public function getmembersLimit($limit){
+        $this->select_join();
+        $this->db->limit($limit);
+        $this->db->order_by($this->table.'.user_id', 'DESC');
         return $this->db->get($this->table)->result();
     }
 

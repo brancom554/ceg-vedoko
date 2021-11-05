@@ -4,9 +4,9 @@
     <div id="gp-buddypress-header">
         <header id="gp-page-title" class="gp-container">
             <div class="gp-container">
-                <div id="gp-breadcrumbs" class="gp-active"><span><span><a href="<?= base_url() ?>">Home</a></span></div>
+                <div id="gp-breadcrumbs" class="gp-active"><span><span><a href="<?= base_url() ?>">Accueil</a></span></div>
                 <div id="gp-page-title-text">
-                    <h1> Register</h1>
+                    <h1> Inscription</h1>
                 </div>
             </div>
             <div class="gp-clear"></div>
@@ -22,9 +22,9 @@
                                 <p id="error_message"></p>
                             </div>
                             <div id="template-notices" role="alert" aria-atomic="true"></div>
-                            <p>Parainer Par : <?= $ref['firstname'].' '.$ref['lastname'] ?>.</p>
+                            <p>Parainé Par : <?= $ref['firstname'].' '.$ref['lastname'] ?>.</p>
                             <div class="register-section" id="basic-details-section">
-                                <h2>Account Details</h2>
+                                <h2>Details du compte</h2>
                                 <label for="email">Email Address *</label>
                                 <input type="email" name="email" id="email" value="" />
                                 <label for="signup_password">Mot de passe *</label>
@@ -35,26 +35,26 @@
                                 <input type="hidden" value="<?= $ref['user_id'] ?>" id="ref_id">
                             </div>
                             <div class="register-section" id="profile-details-section">
-                                <h2>Profile Details</h2>
+                                <h2>Informations Personnelles</h2>
                                 <div class="editfield field_1 field_name required-field visibility-public field_type_textbox">
                                     <fieldset>
                                         <legend id="field_1-1"> Nom <span class="bp-required-field-label">*</span></legend>
                                         <input id="lastname" name="lastname" type="text" value="" aria-required="true" required aria-labelledby="field_1-1" aria-describedby="field_1-3">
-                                        <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p>
+                                        <!-- <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p> -->
                                     </fieldset>
                                 </div>
                                 <div class="editfield field_1 field_name required-field visibility-public alt field_type_textbox">
                                     <fieldset>
                                         <legend id="field_1-1"> Prénom <span class="bp-required-field-label">*</span></legend>
                                         <input id="firstname" name="firstname" type="text" value="" aria-required="true" required aria-labelledby="field_1-1" aria-describedby="field_1-3">
-                                        <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p>
+                                        <!-- <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p> -->
                                     </fieldset>
                                 </div>
                                 <div class="editfield field_1 field_name required-field visibility-public field_type_textbox">
                                     <fieldset>
                                         <legend id="field_1-1"> Téléphone <span class="bp-required-field-label">*</span></legend>
                                         <input id="phone" name="phone" type="text" value="" aria-required="true" required aria-labelledby="field_1-1" aria-describedby="field_1-3">
-                                        <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p>
+                                        <!-- <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p> -->
                                     </fieldset>
                                 </div>
 
@@ -66,7 +66,7 @@
                                             <option value="male">Masculin</option>
                                             <option value="female">Féminin</option>
                                         </select>
-                                        <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p>
+                                        <!-- <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p> -->
                                     </fieldset>
                                 </div>
 
@@ -79,7 +79,7 @@
                                                 <option value="<?= $class->classe_id ?>"><?= $class->classe_name . ' (' . $class->class_code . ')' ?></option>
                                             <?php endforeach; ?>
                                         </select>
-                                        <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p>
+                                        <!-- <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p> -->
                                     </fieldset>
                                 </div>
 
@@ -92,7 +92,7 @@
                                                 <option value="<?= $prom->promotion_id ?>"><?= $prom->promotion_name ?></option>
                                             <?php endforeach; ?>
                                         </select>
-                                        <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p>
+                                        <!-- <p class="field-visibility-settings-notoggle" id="field-visibility-settings-toggle-1"> This field can be seen by: <span class="current-visibility-level">Everyone</span></p> -->
                                     </fieldset>
                                 </div>
 
@@ -113,3 +113,4 @@
     </div>
     <div class="gp-clear"></div>
 </div>
+<br><br><br>

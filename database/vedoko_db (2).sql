@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : jeu. 04 nov. 2021 à 10:10
+-- Généré le : ven. 05 nov. 2021 à 06:47
 -- Version du serveur : 8.0.26
 -- Version de PHP : 7.4.22
 
@@ -86,7 +86,9 @@ INSERT INTO `forums` (`forum_id`, `forum_name`, `forum_type`, `creation_date_tim
 (1619, NULL, 'INDIVIDUAL', '2021-10-27 20:35:50', NULL, NULL, NULL, NULL),
 (1620, NULL, 'INDIVIDUAL', '2021-10-27 20:42:54', 'http://127.0.0.1/vedoko/user/forum/group/home/1620', NULL, NULL, NULL),
 (1621, NULL, 'INDIVIDUAL', '2021-11-04 07:44:54', 'http://127.0.0.1/vedoko/user/forum/group/home/1621', NULL, NULL, NULL),
-(1622, '2nde - Prom : 2003-2004', 'GROUP', '2021-11-04 09:51:43', NULL, NULL, 1614, 1615);
+(1622, '2nde - Prom : 2003-2004', 'GROUP', '2021-11-04 09:51:43', NULL, NULL, 1614, 1615),
+(1623, NULL, 'INDIVIDUAL', '2021-11-04 10:41:48', NULL, NULL, NULL, NULL),
+(1624, NULL, 'INDIVIDUAL', '2021-11-04 10:41:48', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -139,7 +141,9 @@ CREATE TABLE `forum_request` (
 INSERT INTO `forum_request` (`request_id`, `forum_id`, `invited_user`, `created_by`, `date_create`, `active`) VALUES
 (1, 1617, 1623, 1622, '2021-10-25 20:51:54', 1),
 (2, 1620, 1624, 1622, '2021-10-27 20:42:54', 1),
-(3, 1621, 1624, 1622, '2021-11-04 07:44:54', 1);
+(3, 1621, 1624, 1622, '2021-11-04 07:44:54', 1),
+(4, 1623, 1625, 1622, '2021-11-04 10:41:48', 1),
+(5, 1624, 1625, 1622, '2021-11-04 10:41:48', 1);
 
 -- --------------------------------------------------------
 
@@ -246,10 +250,10 @@ CREATE TABLE `user_preferences` (
 --
 
 INSERT INTO `user_preferences` (`user_preference_id`, `referral_id`, `referral_link`, `birth_date`, `father_id`, `is_job_needed`, `is_employee`, `forum_promotion_id`, `forum_general_id`, `activity_sector_id`, `promotion_id`, `classe_id`, `user_id`, `active`, `netword_order`) VALUES
-(5, 1, 'http://127.0.0.1/vedoko/user/subscribe/referal/1622/1486230548', NULL, NULL, NULL, NULL, 1611, NULL, NULL, 1613, 1614, 1622, 1, 1),
-(6, 1622, 'http://127.0.0.1/vedoko/user/subscribe/referal/1623/1959935097', NULL, NULL, NULL, NULL, 1612, NULL, NULL, 1613, 1615, 1623, 1, 1),
-(7, 1622, 'http://127.0.0.1/vedoko/user/subscribe/referal/1624/133234977', NULL, NULL, NULL, NULL, 1618, NULL, NULL, 1614, 1612, 1624, 1, 2),
-(8, 1624, 'http://127.0.0.1/vedoko/user/subscribe/referal/1625/1198240629', NULL, NULL, NULL, NULL, 1622, NULL, NULL, 1614, 1615, 1625, 1, 3);
+(5, 1, 'user/subscribe/referal/1622/1486230548', NULL, NULL, NULL, NULL, 1611, NULL, NULL, 1613, 1614, 1622, 1, 1),
+(6, 1622, 'user/subscribe/referal/1623/1959935097', NULL, NULL, NULL, NULL, 1612, NULL, NULL, 1613, 1615, 1623, 1, 1),
+(7, 1622, 'user/subscribe/referal/1624/133234977', NULL, NULL, NULL, NULL, 1618, NULL, NULL, 1614, 1612, 1624, 1, 2),
+(8, 1624, 'user/subscribe/referal/1625/1198240629', NULL, NULL, NULL, NULL, 1622, NULL, NULL, 1614, 1615, 1625, 1, 3);
 
 --
 -- Index pour les tables déchargées
@@ -348,7 +352,7 @@ ALTER TABLE `classes`
 -- AUTO_INCREMENT pour la table `forums`
 --
 ALTER TABLE `forums`
-  MODIFY `forum_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1623;
+  MODIFY `forum_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1625;
 
 --
 -- AUTO_INCREMENT pour la table `forum_messages`
